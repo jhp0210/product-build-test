@@ -1,14 +1,161 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hello World</title>
-  <link href='/style.css' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Comparison Tool</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #34495e;
+            --accent-color: #3498db;
+            --bg-color: #f8f9fa;
+            --border-color: #e9ecef;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--primary-color);
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            margin-bottom: 30px;
+        }
+
+        .comparison-container {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            overflow: hidden;
+            width: 100%;
+            max-width: 900px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 16px 20px;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+            border-right: 1px solid var(--border-color);
+            width: 33.33%;
+        }
+
+        th:last-child, td:last-child {
+            border-right: none;
+        }
+
+        th {
+            background-color: var(--secondary-color);
+            color: white;
+            font-weight: 600;
+            font-size: 1.1em;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* The first column (Features) gets a different style */
+        td:first-child {
+            background-color: #f1f3f5;
+            font-weight: bold;
+            text-align: left;
+            color: var(--primary-color);
+        }
+
+        /* Editable cells */
+        .editable {
+            transition: background-color 0.2s;
+            cursor: text;
+        }
+
+        .editable:hover, .editable:focus {
+            background-color: #e8f4fd;
+            outline: 2px solid var(--accent-color);
+            border-radius: 4px;
+        }
+
+        .house-header {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        .instructions {
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #7f8c8d;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-  <h1>Hello, world!</h1>
-  <button onclick="console.log('hello');">Press me</button>
-  <script defer type="text/javascript" src="/main.js"></script>
+
+    <h1>🏠 House Comparison Tool</h1>
+
+    <div class="comparison-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Features</th>
+                    <th class="house-header editable" contenteditable="true">House A Address</th>
+                    <th class="house-header editable" contenteditable="true">House B Address</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Price</td>
+                    <td class="editable" contenteditable="true">$500,000</td>
+                    <td class="editable" contenteditable="true">$525,000</td>
+                </tr>
+                <tr>
+                    <td>Bedrooms / Bathrooms</td>
+                    <td class="editable" contenteditable="true">3 Bed / 2 Bath</td>
+                    <td class="editable" contenteditable="true">4 Bed / 2.5 Bath</td>
+                </tr>
+                <tr>
+                    <td>Square Footage</td>
+                    <td class="editable" contenteditable="true">1,800 sqft</td>
+                    <td class="editable" contenteditable="true">2,100 sqft</td>
+                </tr>
+                <tr>
+                    <td>Lot Size</td>
+                    <td class="editable" contenteditable="true">0.2 Acres</td>
+                    <td class="editable" contenteditable="true">0.15 Acres</td>
+                    </tr>
+                <tr>
+                    <td>Year Built</td>
+                    <td class="editable" contenteditable="true">1995</td>
+                    <td class="editable" contenteditable="true">2010</td>
+                </tr>
+                <tr>
+                    <td>Commute Time</td>
+                    <td class="editable" contenteditable="true">25 mins</td>
+                    <td class="editable" contenteditable="true">40 mins</td>
+                </tr>
+                <tr>
+                    <td>Pros</td>
+                    <td class="editable" contenteditable="true">Great backyard, shorter commute</td>
+                    <td class="editable" contenteditable="true">Newer build, more space</td>
+                </tr>
+                <tr>
+                    <td>Cons</td>
+                    <td class="editable" contenteditable="true">Needs kitchen update</td>
+                    <td class="editable" contenteditable="true">Further from city center</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <p class="instructions">💡 <strong>Tip:</strong> Click on any address, price, or detail in the table to edit the text directly.</p>
+
 </body>
 </html>
