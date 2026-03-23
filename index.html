@@ -4,100 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>House Comparison Tool</title>
-    <style>
-        :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #34495e;
-            --accent-color: #3498db;
-            --bg-color: #f8f9fa;
-            --border-color: #e9ecef;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--primary-color);
-            margin: 0;
-            padding: 40px 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        h1 {
-            color: var(--primary-color);
-            margin-bottom: 30px;
-        }
-
-        .comparison-container {
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-            overflow: hidden;
-            width: 100%;
-            max-width: 900px;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        th, td {
-            padding: 16px 20px;
-            text-align: center;
-            border-bottom: 1px solid var(--border-color);
-            border-right: 1px solid var(--border-color);
-            width: 33.33%;
-        }
-
-        th:last-child, td:last-child {
-            border-right: none;
-        }
-
-        th {
-            background-color: var(--secondary-color);
-            color: white;
-            font-weight: 600;
-            font-size: 1.1em;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        /* The first column (Features) gets a different style */
-        td:first-child {
-            background-color: #f1f3f5;
-            font-weight: bold;
-            text-align: left;
-            color: var(--primary-color);
-        }
-
-        /* Editable cells */
-        .editable {
-            transition: background-color 0.2s;
-            cursor: text;
-        }
-
-        .editable:hover, .editable:focus {
-            background-color: #e8f4fd;
-            outline: 2px solid var(--accent-color);
-            border-radius: 4px;
-        }
-
-        .house-header {
-            font-size: 1.2em;
-            font-weight: bold;
-        }
-
-        .instructions {
-            margin-top: 20px;
-            font-size: 0.9em;
-            color: #7f8c8d;
-            text-align: center;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <div class="slider"></div>
+        </label>
+        <span style="margin-left: 10px;">Dark Mode</span>
+    </div>
 
     <h1>🏠 House Comparison Tool</h1>
 
@@ -157,5 +74,6 @@
 
     <p class="instructions">💡 <strong>Tip:</strong> Click on any address, price, or detail in the table to edit the text directly.</p>
 
+    <script src="main.js"></script>
 </body>
 </html>

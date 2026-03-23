@@ -1,1 +1,159 @@
-/* Add styles here */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #34495e;
+    --accent-color: #3498db;
+    --bg-color: #f8f9fa;
+    --card-bg: #ffffff;
+    --border-color: #e9ecef;
+    --text-color: #2c3e50;
+    --feature-bg: #f1f3f5;
+}
+
+[data-theme="dark"] {
+    --primary-color: #ecf0f1;
+    --secondary-color: #2c3e50;
+    --accent-color: #3498db;
+    --bg-color: #1a1a1a;
+    --card-bg: #2d2d2d;
+    --border-color: #404040;
+    --text-color: #ecf0f1;
+    --feature-bg: #333333;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+h1 {
+    color: var(--primary-color);
+    margin-bottom: 30px;
+}
+
+.comparison-container {
+    background: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    overflow: hidden;
+    width: 100%;
+    max-width: 900px;
+    transition: background-color 0.3s;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 16px 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+    width: 33.33%;
+}
+
+th:last-child, td:last-child {
+    border-right: none;
+}
+
+th {
+    background-color: var(--secondary-color);
+    color: white;
+    font-weight: 600;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* The first column (Features) gets a different style */
+td:first-child {
+    background-color: var(--feature-bg);
+    font-weight: bold;
+    text-align: left;
+    color: var(--text-color);
+}
+
+/* Editable cells */
+.editable {
+    transition: background-color 0.2s;
+    cursor: text;
+}
+
+.editable:hover, .editable:focus {
+    background-color: var(--accent-color);
+    color: white;
+    outline: none;
+    border-radius: 4px;
+}
+
+.house-header {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.instructions {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #7f8c8d;
+    text-align: center;
+}
+
+/* Dark Mode Toggle */
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+.theme-switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+}
+
+.theme-switch input {
+    display: none;
+}
+
+.slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    background-color: #fff;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 26px;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: var(--accent-color);
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
