@@ -3,97 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>House Comparison Tool</title>
+    <title>Smart House Comparison Tool | Make Informed Real Estate Decisions</title>
+    <meta name="description" content="Compare houses easily with our smart tool. Get tips on house hunting, price evaluation, and property features to find your perfect home.">
     <link rel="stylesheet" href="style.css">
     <meta name="google-adsense-account" content="ca-pub-3246264187691952">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3246264187691952"
      crossorigin="anonymous"></script>
 </head>
 <body>
-
-    <div class="theme-switch-wrapper">
-        <label class="theme-switch" for="checkbox">
-            <input type="checkbox" id="checkbox" />
-            <div class="slider"></div>
-        </label>
-        <span style="margin-left: 10px;">Dark Mode</span>
-    </div>
-
-    <h1>🏠 House Comparison Tool</h1>
-
-    <div class="comparison-container">
-        <table>
-            <thead>
-                <tr>
-                    <th>Features</th>
-                    <th class="house-header editable" contenteditable="true">House A Address</th>
-                    <th class="house-header editable" contenteditable="true">House B Address</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Price</td>
-                    <td class="editable" contenteditable="true">$500,000</td>
-                    <td class="editable" contenteditable="true">$525,000</td>
-                </tr>
-                <tr>
-                    <td>Bedrooms / Bathrooms</td>
-                    <td class="editable" contenteditable="true">3 Bed / 2 Bath</td>
-                    <td class="editable" contenteditable="true">4 Bed / 2.5 Bath</td>
-                </tr>
-                <tr>
-                    <td>Square Footage</td>
-                    <td class="editable" contenteditable="true">1,800 sqft</td>
-                    <td class="editable" contenteditable="true">2,100 sqft</td>
-                </tr>
-                <tr>
-                    <td>Lot Size</td>
-                    <td class="editable" contenteditable="true">0.2 Acres</td>
-                    <td class="editable" contenteditable="true">0.15 Acres</td>
-                    </tr>
-                <tr>
-                    <td>Year Built</td>
-                    <td class="editable" contenteditable="true">1995</td>
-                    <td class="editable" contenteditable="true">2010</td>
-                </tr>
-                <tr>
-                    <td>Commute Time</td>
-                    <td class="editable" contenteditable="true">25 mins</td>
-                    <td class="editable" contenteditable="true">40 mins</td>
-                </tr>
-                <tr>
-                    <td>Pros</td>
-                    <td class="editable" contenteditable="true">Great backyard, shorter commute</td>
-                    <td class="editable" contenteditable="true">Newer build, more space</td>
-                </tr>
-                <tr>
-                    <td>Cons</td>
-                    <td class="editable" contenteditable="true">Needs kitchen update</td>
-                    <td class="editable" contenteditable="true">Further from city center</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
-    <p class="instructions">💡 <strong>Tip:</strong> Click on any address, price, or detail in the table to edit the text directly.</p>
-
-    <div class="form-container">
-        <h2>🤝 Partnership Inquiry</h2>
-        <form action="https://formspree.io/f/mqeyvgzo" method="POST">
-            <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" placeholder="Your Name" required>
+    <header>
+        <div class="container">
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch" for="checkbox">
+                    <input type="checkbox" id="checkbox" />
+                    <div class="slider"></div>
+                </label>
+                <span style="margin-left: 10px;">Dark Mode</span>
             </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Your Email" required>
+            <h1>🏠 House Comparison Tool</h1>
+            <p class="subtitle">Empowering your home buying journey with data-driven comparisons.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Hero Section / Introduction -->
+        <section class="intro-section">
+            <h2>Why Use a House Comparison Tool?</h2>
+            <p>Buying a home is one of the most significant financial decisions you'll ever make. To ensure you're making the right choice, it's crucial to compare different properties side-by-side. Our tool helps you evaluate prices, features, and locations systematically.</p>
+        </section>
+
+        <!-- Tool Section -->
+        <section class="tool-section">
+            <div class="comparison-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Features</th>
+                            <th class="house-header editable" contenteditable="true">House A Address</th>
+                            <th class="house-header editable" contenteditable="true">House B Address</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Price</td>
+                            <td class="editable" contenteditable="true">$500,000</td>
+                            <td class="editable" contenteditable="true">$525,000</td>
+                        </tr>
+                        <tr>
+                            <td>Bedrooms / Bathrooms</td>
+                            <td class="editable" contenteditable="true">3 Bed / 2 Bath</td>
+                            <td class="editable" contenteditable="true">4 Bed / 2.5 Bath</td>
+                        </tr>
+                        <tr>
+                            <td>Square Footage</td>
+                            <td class="editable" contenteditable="true">1,800 sqft</td>
+                            <td class="editable" contenteditable="true">2,100 sqft</td>
+                        </tr>
+                        <tr>
+                            <td>Lot Size</td>
+                            <td class="editable" contenteditable="true">0.2 Acres</td>
+                            <td class="editable" contenteditable="true">0.15 Acres</td>
+                        </tr>
+                        <tr>
+                            <td>Year Built</td>
+                            <td class="editable" contenteditable="true">1995</td>
+                            <td class="editable" contenteditable="true">2010</td>
+                        </tr>
+                        <tr>
+                            <td>Commute Time</td>
+                            <td class="editable" contenteditable="true">25 mins</td>
+                            <td class="editable" contenteditable="true">40 mins</td>
+                        </tr>
+                        <tr>
+                            <td>Pros</td>
+                            <td class="editable" contenteditable="true">Great backyard, shorter commute</td>
+                            <td class="editable" contenteditable="true">Newer build, more space</td>
+                        </tr>
+                        <tr>
+                            <td>Cons</td>
+                            <td class="editable" contenteditable="true">Needs kitchen update</td>
+                            <td class="editable" contenteditable="true">Further from city center</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-            <div class="form-group">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" placeholder="How can we work together?" required></textarea>
+            <p class="instructions">💡 <strong>Tip:</strong> Click on any address, price, or detail in the table to edit the text directly.</p>
+        </section>
+
+        <!-- Educational Content Section (Key for AdSense) -->
+        <section class="educational-content">
+            <h2>Top 5 Things to Consider When Comparing Homes</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>1. Price vs. Value</h3>
+                    <p>Always look beyond the asking price. Consider the property taxes, potential renovation costs, and the local real estate market trends in that specific neighborhood.</p>
+                </div>
+                <div class="info-card">
+                    <h3>2. Location & Neighborhood</h3>
+                    <p>You can change the house, but you can't change its location. Research school districts, proximity to amenities, and future development plans for the area.</p>
+                </div>
+                <div class="info-card">
+                    <h3>3. Structural Integrity</h3>
+                    <p>Pay close attention to the roof, foundation, and HVAC systems. Older homes may have character, but they often come with higher maintenance requirements.</p>
+                </div>
+                <div class="info-card">
+                    <h3>4. Resale Potential</h3>
+                    <p>Think about the future. Will this house be easy to sell in 5 or 10 years? Features like extra bedrooms or a finished basement can significantly impact future value.</p>
+                </div>
             </div>
-            <button type="submit" class="submit-btn">Send Inquiry</button>
-        </form>
+        </section>
+
+        <!-- Form Section -->
+        <section class="form-section">
+            <div class="form-container">
+                <h2>🤝 Partnership & Support</h2>
+                <p>Have questions about the tool or want to collaborate? Reach out to us below.</p>
+                <form action="https://formspree.io/f/mqeyvgzo" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="How can we help you?" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Inquiry</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-info">
+                <h3>About House Comparison Tool</h3>
+                <p>We provide free tools to help people make smarter decisions in the real estate market. Our mission is to simplify the home-buying process through data and transparency.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Legal & Support</h4>
+                <ul>
+                    <li><a href="#privacy">Privacy Policy</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 House Comparison Tool. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Simple Privacy Policy Modal/Section -->
+    <div id="privacy" class="modal-placeholder" style="padding: 20px; background: #f9f9f9; margin-top: 50px; border-top: 1px solid #ddd;">
+        <h2>Privacy Policy</h2>
+        <p>Your privacy is important to us. This site does not store personal data entered into the comparison table. We use Google AdSense to serve ads, which may use cookies to personalize your experience. By using our site, you agree to our use of these tools.</p>
     </div>
 
     <script src="main.js"></script>
